@@ -33,7 +33,7 @@ cookies部分：
 
 
 
-![image-20240513225429733](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240513225429733.png)
+![image-20240513225429733](/image-20240513225429733.png)
 
 #### （2）reponse
 
@@ -41,7 +41,7 @@ cookies部分：
 
 大概这样子：
 
-![image-20240513225927162](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240513225927162.png)
+![image-20240513225927162](/image-20240513225927162.png)
 
 其中`FieldState == 0` 并且  `TimeStatus == 1 ` 对应当前场地当前时间空闲，可以买。对应如下js代码
 
@@ -65,7 +65,7 @@ cookies部分：
 
 
 
-![image-20240513224551243](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240513224551243.png)
+![image-20240513224551243](/image-20240513224551243.png)
 
 
 

@@ -272,10 +272,9 @@ def filter(df, *key, **param):
 
 
 if __name__ == '__main__':
-    # username = 2111252
-    # password = '59305329Adsfe'
-    username='2111917'
-    password='2574474201aA'
+
+    username=''
+    password=''
     agent = NkuVenue(username, password)
     # agent.update_cookie()
     # agent.refrash_venue_pd()

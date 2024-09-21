@@ -1,6 +1,6 @@
 """
     调用 get_sso_jwt(username, password) 得到sso.nankai.edu.cn 的jwt 和 userid
-
+    逻辑过程 /doc/sso流程.md 里面
     Returns:
         _dict_: {
                 'JWTUserToken' : 
