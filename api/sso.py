@@ -219,16 +219,12 @@ def get_sso_jwt(username='2111252', password='123456'):
         r = session.post(redirect_url, headers=hd4, allow_redirects=False)
         if r.status_code == 200 or r.status_code == 302:
             break
-        time.sleep(0.1)
+        time.sleep(1)
 
 
     print('\nstep 4  /User/LoginCas?ticket=:', ticket[:10],'... ',r.status_code)
 
-    
-    # # print current session cookies
-    # print('\n\ncurrent session cookies:')
-    # for k, v in session.cookies.items():
-    #     print(k,':', v)
+
     res = session.cookies.get_dict()
     res['username'] = username
     dump_cookies(res)

@@ -1,7 +1,7 @@
 
 import pickle,os
 from datetime import datetime
-from http.cookies import SimpleCookie
+
 
 COOKIE_PATH = os.getcwd() + '/test_tmp_data/cookies.pkl'
 
@@ -29,6 +29,7 @@ def load_cookies(file_path=COOKIE_PATH):
     except FileNotFoundError:
         print("未找到 cookies 文件.")
         return None
+
 
 def are_cookies_valid(cookies):
     if cookies:

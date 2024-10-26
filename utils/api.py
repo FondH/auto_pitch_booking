@@ -1,5 +1,6 @@
 import requests
 import time, json
+from utils.logger import logger
 def get_hearder():
     return {
         'Host': 'tycgs.nankai.edu.cn',
@@ -24,14 +25,13 @@ def get_venue_raw_data(cookie, days):
     # dateadd 0-3 表示今天、明天、后天、大后天（可以无）
 
 
-    print(f'get_all_list: refresh field data')
+    logger.info(f'get_all_list: refresh field data')
     _url = 'http://tycgs.nankai.edu.cn/Field/GetVenueStateNew?dateadd={}&TimePeriod={}&VenueNo=003&FieldTypeNo=JNYMQ&_={}'
     status = []
     for i in days:
 
         for period in range(3):
             tar_u = _url.format(i, period,get_tp())
-            #print(tar_u)
             try:
                 rs = requests.get(tar_u,headers=get_hearder(),cookies=cookie)
                 rs.raise_for_status()
@@ -46,14 +46,15 @@ def get_venue_raw_data(cookie, days):
                 status += result_data
                 time.sleep(0.2)
             except json.JSONDecodeError as e:
-                print(f"Error decoding JSON: , 应该是令牌未加载或者过期了")
+                logger.warning(f"Error decoding JSON: , 应该是令牌未加载或者过期了")
                 raise
+
             except requests.exceptions.RequestException as e:
-                print(f"Request failed: {e}")
+                logger.error(f"Request failed: {e}")
                 raise
-                
+
             except Exception as e:
-                print("获得目标数据失败",e)
+                logger.error("获得目标数据失败",e)
 
 
 
