@@ -1,8 +1,7 @@
 ### 1.获得tycgs.nankai sso token的流程
 
-#### 背景
 
-因为访问通过 `http://tycgs.nankai.edu.cn` 下的所有Api 都需要认证信息，其中必要的cookie信息是如下三个键值对：
+访问通过 `http://tycgs.nankai.edu.cn` 下的所有Api 都需要认证信息，其中必要的cookie信息是如下三个键值对：
 
 ~~~
 'ASP.NET_SessionId': 'z52ivhk*****',

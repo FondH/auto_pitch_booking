@@ -1,8 +1,7 @@
 ### 1.获得tycgs.nankai sso token的流程
 
-#### 背景
 
-想自动化订场，但是发现南开体育的认证也升级和教务系统一致了，不过反而简化了爬虫的过程。想爬 `http://tycgs.nankai.edu.cn` 下的所有Api 都需要认证信息，其中必要的cookie信息是如下三个键值对：
+发现南开体育的认证也升级和教务系统一致了，不过反而简化了爬虫的过程。想爬 `http://tycgs.nankai.edu.cn` 下的所有Api 都需要认证信息，其中必要的cookie信息是如下三个键值对：
 
 ~~~
 'ASP.NET_SessionId': 'z52ivhk*****',
